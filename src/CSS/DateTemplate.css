@@ -4,3 +4,7 @@
   grid-template-rows: repeat(6, minmax(60px, auto));
   text-align: center;
 }
+
+.today {
+  color: var(--point-skyblue-color) !important;
+}

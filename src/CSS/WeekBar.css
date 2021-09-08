@@ -1,0 +1,7 @@
+.week {
+  margin-bottom: 30px;
+  color: var(--point-skyblue-color);
+  display: grid;
+  grid-template-columns: repeat(7, minmax(90px, auto));
+  text-align: center;
+}

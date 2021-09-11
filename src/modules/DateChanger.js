@@ -1,23 +1,23 @@
 const DateChanger = (event, context) => {
   const dateObj = context.dateState;
   const {
-    target: { className },
+    target: { classList },
   } = event;
   let newState;
 
-  if (className === "down-year-btn") {
+  if (classList.contains("down-year-btn")) {
     newState = {
       ...dateObj,
       year: dateObj.year === 0 ? 0 : dateObj.year - 1,
     };
   }
-  if (className === "up-year-btn") {
+  if (classList.contains("up-year-btn")) {
     newState = {
       ...dateObj,
       year: dateObj.year + 1,
     };
   }
-  if (className === "down-month-btn") {
+  if (classList.contains("down-month-btn")) {
     if (dateObj.month === 0) {
       newState = {
         ...dateObj,
@@ -31,7 +31,7 @@ const DateChanger = (event, context) => {
       };
     }
   }
-  if (className === "up-month-btn") {
+  if (classList.contains("up-month-btn")) {
     if (dateObj.month === 11) {
       newState = {
         ...dateObj,

@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.js": "/https;//soonitoon.github.io/cmi-react-calendar/static/js/main.569ec6e4.chunk.js",
-    "main.js.map": "/https;//soonitoon.github.io/cmi-react-calendar/static/js/main.569ec6e4.chunk.js.map",
-    "runtime-main.js": "/https;//soonitoon.github.io/cmi-react-calendar/static/js/runtime-main.4bcbeb9c.js",
-    "runtime-main.js.map": "/https;//soonitoon.github.io/cmi-react-calendar/static/js/runtime-main.4bcbeb9c.js.map",
-    "static/js/2.e7e7dd64.chunk.js": "/https;//soonitoon.github.io/cmi-react-calendar/static/js/2.e7e7dd64.chunk.js",
-    "static/js/2.e7e7dd64.chunk.js.map": "/https;//soonitoon.github.io/cmi-react-calendar/static/js/2.e7e7dd64.chunk.js.map",
-    "index.html": "/https;//soonitoon.github.io/cmi-react-calendar/index.html",
-    "static/js/2.e7e7dd64.chunk.js.LICENSE.txt": "/https;//soonitoon.github.io/cmi-react-calendar/static/js/2.e7e7dd64.chunk.js.LICENSE.txt"
+    "main.js": "/cmi-react-calendar/static/js/main.569ec6e4.chunk.js",
+    "main.js.map": "/cmi-react-calendar/static/js/main.569ec6e4.chunk.js.map",
+    "runtime-main.js": "/cmi-react-calendar/static/js/runtime-main.2ca1ddca.js",
+    "runtime-main.js.map": "/cmi-react-calendar/static/js/runtime-main.2ca1ddca.js.map",
+    "static/js/2.9a0095c4.chunk.js": "/cmi-react-calendar/static/js/2.9a0095c4.chunk.js",
+    "static/js/2.9a0095c4.chunk.js.map": "/cmi-react-calendar/static/js/2.9a0095c4.chunk.js.map",
+    "index.html": "/cmi-react-calendar/index.html",
+    "static/js/2.9a0095c4.chunk.js.LICENSE.txt": "/cmi-react-calendar/static/js/2.9a0095c4.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.4bcbeb9c.js",
-    "static/js/2.e7e7dd64.chunk.js",
+    "static/js/runtime-main.2ca1ddca.js",
+    "static/js/2.9a0095c4.chunk.js",
     "static/js/main.569ec6e4.chunk.js"
   ]
 }

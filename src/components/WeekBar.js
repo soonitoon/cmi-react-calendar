@@ -1,15 +1,23 @@
 import React from "react";
-import "../CSS/WeekBar.css";
+import styled from "styled-components";
+
+const Week = styled.ul`
+  margin-bottom: 30px;
+  color: var(--point-skyblue-color);
+  display: grid;
+  grid-template-columns: repeat(7, minmax(90px, auto));
+  text-align: center;
+`;
 
 const WeekBar = () => {
   const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
   return (
-    <ul className="week">
-      {days.map((day) => (
-        <li key={day}>{day}</li>
+    <Week>
+      {days.map((day, index) => (
+        <li key={index}>{day}</li>
       ))}
-    </ul>
+    </Week>
   );
 };
 

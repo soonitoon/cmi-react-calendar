@@ -1,9 +1,15 @@
-const DateChanger = (event, context) => {
-  const dateObj = context.dateState;
-  const {
-    target: { classList },
-  } = event;
-  let newState;
+import React from "react";
+import { IDateContext, IDateObj } from "../context/DateContext";
+
+type DateChanger = (
+  event: React.MouseEvent<HTMLButtonElement>,
+  context: IDateContext
+) => void;
+
+const dateChanger: DateChanger = (event, context) => {
+  const dateObj: IDateObj = context.dateState;
+  const classList: DOMTokenList = (event.target as Element).classList;
+  let newState: IDateObj = dateObj;
 
   if (classList.contains("down-year-btn")) {
     newState = {
@@ -48,4 +54,4 @@ const DateChanger = (event, context) => {
   context.setDateState(newState);
 };
 
-export default DateChanger;
+export default dateChanger;

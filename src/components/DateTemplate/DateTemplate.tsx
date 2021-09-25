@@ -1,18 +1,19 @@
-import React, { ReactElement, useContext } from "react";
-import { DateContext, IDateContext } from "../../context/DateContext";
+import React, { ReactElement } from "react";
+import { useSelector } from "react-redux";
 import getDateObj from "../../modules/GetDateObj";
+import { IDefaultDate } from "../../reducer/dateReducer";
 import DateFactory from "../DateFactory/DateFactory";
 import DateUl from "./styles";
 
 const DateTemplate: React.FC = (): ReactElement => {
-  const context: IDateContext = useContext<IDateContext>(DateContext);
+  const date = useSelector((store: { date: IDefaultDate }) => store.date);
 
   interface IDateObj {
     today: number;
     dateLists: number[][];
   }
 
-  const { today, dateLists }: IDateObj = getDateObj(context.dateState);
+  const { today, dateLists }: IDateObj = getDateObj(date);
 
   return (
     <DateUl>

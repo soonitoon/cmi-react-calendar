@@ -1,10 +1,10 @@
-import { IDateObj } from "../context/DateContext";
+import { IDefaultDate } from "../reducer/dateReducer";
 
-const getLastMonthList: Function = (dateState: IDateObj): number[] => {
+const getLastMonthList: Function = (dateState: IDefaultDate): number[] => {
   const month: number = dateState.month;
   const lastMonth: number = month === 0 ? 11 : month - 1;
 
-  const lastMonthContext: IDateObj = {
+  const lastMonthContext: IDefaultDate = {
     ...dateState,
     month: lastMonth,
   };
@@ -13,7 +13,7 @@ const getLastMonthList: Function = (dateState: IDateObj): number[] => {
   let dateList: number[];
   dateList = [];
 
-  const firstDayContext: IDateObj = {
+  const firstDayContext: IDefaultDate = {
     ...dateState,
     date: 1,
   };
@@ -25,7 +25,7 @@ const getLastMonthList: Function = (dateState: IDateObj): number[] => {
   return dateList;
 };
 
-const getNextMonthList = (dateState: IDateObj): number[] => {
+const getNextMonthList = (dateState: IDefaultDate): number[] => {
   const lastDate: number = getLastDateOfMonth(dateState);
   dateState = {
     ...dateState,
@@ -43,12 +43,12 @@ const getNextMonthList = (dateState: IDateObj): number[] => {
   return dateList;
 };
 
-const getDay = (dateState: IDateObj): number => {
-  const { year, month, date }: IDateObj = dateState;
+const getDay = (dateState: IDefaultDate): number => {
+  const { year, month, date }: IDefaultDate = dateState;
   return new Date(year, month, date).getDay();
 };
 
-const getCurrentMonthList = (dateState: IDateObj): number[] => {
+const getCurrentMonthList = (dateState: IDefaultDate): number[] => {
   let dateList: number[];
   dateList = [];
 
@@ -59,13 +59,13 @@ const getCurrentMonthList = (dateState: IDateObj): number[] => {
   return dateList;
 };
 
-const getLastDateOfMonth = (dateState: IDateObj): number => {
+const getLastDateOfMonth = (dateState: IDefaultDate): number => {
   const { year, month } = dateState;
 
   return new Date(year, month + 1, 0).getDate(); // return last date of last month.
 };
 
-const getDateObj: Function = (dateState: IDateObj) => {
+const getDateObj: Function = (dateState: IDefaultDate) => {
   const realDate: Date = new Date();
   let today: number = -1;
 

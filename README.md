@@ -1,6 +1,6 @@
 # cmi-react-calendar
 
-![Simple Calendar Logo](https://lh4.googleusercontent.com/_tuwFNQ60CICDbMxgvprZbh78IqS8hEyzQZjOBLplrDL0R_OLLR_A-IAxmVeUoUJBCWwT7hA7tAHkS1YxUWt=w1599-h908)
+![Simple Calendar Logo](https://drive.google.com/u/0/uc?id=1MH-imeS6GuGmk0RYXmZy4sdyDkB4AyH8&export=download)
 
 Rebuild the calendar using React ⚛️
 
@@ -11,12 +11,14 @@ Rebuild the calendar using React ⚛️
 
 ## 프로젝트 간단 요약 📝
 
-### 과제 요구 사항
+### 3주차 과제
+
+#### 과제 요구 사항
 
 - 2주차에 `Valia JS` 로 만들었던 캘린더를 `React`로 리펙토링하기([1, 2주차 저장소](https://github.com/soonitoon/cmi-study)).
 - `useContext`를 사용한 전역상태관리, 함수형 컴포넌트 사용하기.
 
-### 프로젝트 구성
+#### 프로젝트 구성
 
 - `/src`
   - `index.js`: `App` 컴포넌트 랜더링
@@ -33,6 +35,12 @@ Rebuild the calendar using React ⚛️
     - `DateFactory.js`: 날짜 리스트를 만드는 컴포넌트
     - `DateTemplate.js`: 날짜 리스트들의 부모 컴포넌트
     - `WeekBar.js`: 일요일부터 토요일까지를 나타내는 막대
+
+### 4주차 과제
+
+#### 과제 요구 사항
+
+#### 프로젝트 구성
 
 ### 로컬 실행
 

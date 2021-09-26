@@ -1,5 +1,5 @@
-import { combineReducers, createStore } from "redux";
-import { dateReducer } from "./dateReducer";
+import { combineReducers, createStore } from 'redux';
+import { dateReducer } from './dateReducer';
 
 const rootReducer = combineReducers({
   date: dateReducer,

@@ -1,4 +1,15 @@
-import { IDefaultDate } from "../reducer/dateReducer";
+import { IDefaultDate } from '../reducer/dateReducer';
+
+const getDay = (dateState: IDefaultDate): number => {
+  const { year, month, date }: IDefaultDate = dateState;
+  return new Date(year, month, date).getDay();
+};
+
+const getLastDateOfMonth = (dateState: IDefaultDate): number => {
+  const { year, month } = dateState;
+
+  return new Date(year, month + 1, 0).getDate(); // return last date of last month.
+};
 
 const getLastMonthList: Function = (dateState: IDefaultDate): number[] => {
   const month: number = dateState.month;
@@ -43,11 +54,6 @@ const getNextMonthList = (dateState: IDefaultDate): number[] => {
   return dateList;
 };
 
-const getDay = (dateState: IDefaultDate): number => {
-  const { year, month, date }: IDefaultDate = dateState;
-  return new Date(year, month, date).getDay();
-};
-
 const getCurrentMonthList = (dateState: IDefaultDate): number[] => {
   let dateList: number[];
   dateList = [];
@@ -57,12 +63,6 @@ const getCurrentMonthList = (dateState: IDefaultDate): number[] => {
   }
 
   return dateList;
-};
-
-const getLastDateOfMonth = (dateState: IDefaultDate): number => {
-  const { year, month } = dateState;
-
-  return new Date(year, month + 1, 0).getDate(); // return last date of last month.
 };
 
 const getDateObj: Function = (dateState: IDefaultDate) => {

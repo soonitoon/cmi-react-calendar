@@ -1,9 +1,9 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import store from "./reducer";
-import { Provider } from "react-redux";
-import { GlobalStyle } from "./global-styles";
-import App from "./App";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import store from './reducer';
+import { GlobalStyle } from './global-styles';
+import App from './App';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -12,7 +12,7 @@ ReactDOM.render(
       <App />
     </Provider>
   </React.StrictMode>,
-  document.getElementById("root")
+  document.getElementById('root'),
 );
 
 // If you want to start measuring performance in your app, pass a function

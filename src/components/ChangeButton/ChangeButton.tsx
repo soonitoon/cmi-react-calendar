@@ -1,7 +1,7 @@
-import React, { ReactElement } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import changeCalendar from "../../actions";
-import Button from "./styles";
+import React, { ReactElement } from 'react';
+import { useDispatch } from 'react-redux';
+import changeCalendar from '../../actions';
+import Button from './styles';
 
 interface IChangeButton {
   type: string;
@@ -22,7 +22,7 @@ const ChangeButton: React.FC<IChangeButton> = ({
         dispatch(changeCalendar(className));
       }}
     >
-      {direction === "DECREMENT" ? "<" : ">"}
+      {direction === 'DECREMENT' ? '<' : '>'}
     </Button>
   );
 };

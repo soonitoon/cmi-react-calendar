@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { CSSVariables } from "../../global-styles";
+import styled from 'styled-components';
+import { CSSVariables } from '../../global-styles';
 
 const Button = styled.button`
   border: none;

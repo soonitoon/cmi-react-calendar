@@ -1,6 +1,6 @@
-import React, { ReactElement } from "react";
-import { CSSVariables } from "../../global-styles";
-import DateLi from "./styles";
+import React, { ReactElement } from 'react';
+import { CSSVariables } from '../../global-styles';
+import DateLi from './styles';
 
 interface IDateFactory {
   dateList: number[];
@@ -19,12 +19,12 @@ const DateFactory: React.FC<IDateFactory> = ({
         (eachDate: number, index: number): React.ReactElement => (
           <DateLi
             key={index}
-            today={eachDate === today ? CSSVariables.pointSkyblueColor : ""}
-            isgray={isGray ? "gray" : ""}
+            today={eachDate === today ? CSSVariables.pointSkyblueColor : ''}
+            isgray={isGray ? 'gray' : ''}
           >
             {eachDate}
           </DateLi>
-        )
+        ),
       )}
     </>
   );

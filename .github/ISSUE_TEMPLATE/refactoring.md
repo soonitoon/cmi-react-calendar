@@ -1,7 +1,7 @@
 ---
 name: Refactoring
 about: Refactoring code
-title: ''
+title: "[Refactor]"
 labels: ''
 assignees: ''
 

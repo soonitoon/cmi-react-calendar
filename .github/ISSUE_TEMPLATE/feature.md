@@ -1,7 +1,7 @@
 ---
 name: Feature
 about: Suggest an idea for this project
-title: ''
+title: "[Feat] 신기능"
 labels: ''
 assignees: ''
 

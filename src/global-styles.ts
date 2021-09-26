@@ -1,5 +1,5 @@
-import { createGlobalStyle } from "styled-components";
-import reset from "styled-reset";
+import { createGlobalStyle } from 'styled-components';
+import reset from 'styled-reset';
 
 interface ICSSVariables {
   mainFontFamily: string;
@@ -14,11 +14,11 @@ interface ICSSVariables {
 export const CSSVariables: ICSSVariables = {
   mainFontFamily: '"Roboto", sans-serif',
   titleFontFamily: '"Dancing Script", cursive',
-  mainBackgroundColor: "#0f111b",
-  mainFontColor: "white",
-  pointSkyblueColor: "#09cefc",
-  sundayRedColor: "#ee3b50",
-  notCurrentDateColor: "grey",
+  mainBackgroundColor: '#0f111b',
+  mainFontColor: 'white',
+  pointSkyblueColor: '#09cefc',
+  sundayRedColor: '#ee3b50',
+  notCurrentDateColor: 'grey',
 };
 
 export const GlobalStyle = createGlobalStyle`

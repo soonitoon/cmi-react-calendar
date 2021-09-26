@@ -1,9 +1,9 @@
-import React, { ReactElement } from "react";
-import { useSelector } from "react-redux";
-import getDateObj from "../../modules/GetDateObj";
-import { IDefaultDate } from "../../reducer/dateReducer";
-import DateFactory from "../DateFactory/DateFactory";
-import DateUl from "./styles";
+import React, { ReactElement } from 'react';
+import { useSelector } from 'react-redux';
+import getDateObj from '../../modules/GetDateObj';
+import { IDefaultDate } from '../../reducer/dateReducer';
+import DateFactory from '../DateFactory/DateFactory';
+import DateUl from './styles';
 
 const DateTemplate: React.FC = (): ReactElement => {
   const date = useSelector((store: { date: IDefaultDate }) => store.date);
@@ -25,7 +25,7 @@ const DateTemplate: React.FC = (): ReactElement => {
             today={today}
             isGray={index !== 1 ? true : false} // 0, 2 => last, next month. 1 = > current month.
           ></DateFactory>
-        )
+        ),
       )}
     </DateUl>
   );

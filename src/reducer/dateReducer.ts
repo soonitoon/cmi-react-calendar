@@ -14,50 +14,48 @@ const defaultDate: IDefaultDate = {
 
 type TDateReducer = (
   state: IDefaultDate,
-  action: { type: string }
+  action: { type: string },
 ) => IDefaultDate;
 
 export const dateReducer: TDateReducer = (state = defaultDate, action) => {
   switch (action.type) {
-    case "INCREMENT-YEAR":
+    case 'INCREMENT-YEAR':
       return {
         ...state,
         year: state.year + 1,
       };
 
-    case "DECREMENT-YEAR":
+    case 'DECREMENT-YEAR':
       return {
         ...state,
         year: state.year === 0 ? 0 : state.year - 1,
       };
 
-    case "INCREMENT-MONTH":
+    case 'INCREMENT-MONTH':
       if (state.month === 11) {
         return {
           ...state,
           month: 0,
           year: state.year + 1,
         };
-      } else {
-        return {
-          ...state,
-          month: state.month + 1,
-        };
       }
+      return {
+        ...state,
+        month: state.month + 1,
+      };
 
-    case "DECREMENT-MONTH":
+    case 'DECREMENT-MONTH':
       if (state.month === 0) {
         return {
           ...state,
           month: 11,
           year: state.year === 0 ? 0 : state.year - 1,
         };
-      } else {
-        return {
-          ...state,
-          month: state.month - 1,
-        };
       }
+      return {
+        ...state,
+        month: state.month - 1,
+      };
 
     default:
       return state;

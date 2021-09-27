@@ -1,37 +1,44 @@
+import {
+  DECREMENT_MONTH,
+  DECREMENT_YEAR,
+  INCREMENT_MONTH,
+  INCREMENT_YEAR,
+} from '../actions';
+
 const date: Date = new Date();
 
-export interface IDefaultDate {
+export interface DefaultDateConfig {
   year: number;
   month: number;
   date: number;
 }
 
-const defaultDate: IDefaultDate = {
+const defaultDate: DefaultDateConfig = {
   year: date.getFullYear(),
   month: date.getMonth(),
   date: date.getDate(),
 };
 
-type TDateReducer = (
-  state: IDefaultDate,
+type DateReducerConfig = (
+  state: DefaultDateConfig,
   action: { type: string },
-) => IDefaultDate;
+) => DefaultDateConfig;
 
-export const dateReducer: TDateReducer = (state = defaultDate, action) => {
+export const dateReducer: DateReducerConfig = (state = defaultDate, action) => {
   switch (action.type) {
-    case 'INCREMENT-YEAR':
+    case INCREMENT_YEAR:
       return {
         ...state,
         year: state.year + 1,
       };
 
-    case 'DECREMENT-YEAR':
+    case DECREMENT_YEAR:
       return {
         ...state,
         year: state.year === 0 ? 0 : state.year - 1,
       };
 
-    case 'INCREMENT-MONTH':
+    case INCREMENT_MONTH:
       if (state.month === 11) {
         return {
           ...state,
@@ -44,7 +51,7 @@ export const dateReducer: TDateReducer = (state = defaultDate, action) => {
         month: state.month + 1,
       };
 
-    case 'DECREMENT-MONTH':
+    case DECREMENT_MONTH:
       if (state.month === 0) {
         return {
           ...state,

@@ -1,19 +1,19 @@
 import React, { ReactElement } from 'react';
 import { useSelector } from 'react-redux';
-import getDateObj from '../../modules/GetDateObj';
-import { IDefaultDate } from '../../reducer/dateReducer';
+import getDateObj from '../../modules/getDateObj';
+import { DefaultDateConfig } from '../../reducer/dateReducer';
 import DateFactory from '../DateFactory/DateFactory';
 import DateUl from './styles';
 
-const DateTemplate: React.FC = (): ReactElement => {
-  const date = useSelector((store: { date: IDefaultDate }) => store.date);
+const DateTemplate = (): ReactElement => {
+  const date = useSelector((store: { date: DefaultDateConfig }) => store.date);
 
-  interface IDateObj {
+  interface DateObjConfig {
     today: number;
     dateLists: number[][];
   }
 
-  const { today, dateLists }: IDateObj = getDateObj(date);
+  const { today, dateLists }: DateObjConfig = getDateObj(date);
 
   return (
     <DateUl>
@@ -24,7 +24,7 @@ const DateTemplate: React.FC = (): ReactElement => {
             dateList={dateList}
             today={today}
             isGray={index !== 1 ? true : false} // 0, 2 => last, next month. 1 = > current month.
-          ></DateFactory>
+          />
         ),
       )}
     </DateUl>

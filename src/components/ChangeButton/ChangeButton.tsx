@@ -1,27 +1,45 @@
-import React, { ReactElement } from 'react';
+import { ReactElement } from 'react';
 import { useDispatch } from 'react-redux';
-import changeCalendar from '../../actions';
+import {
+  INCREMENT_YEAR,
+  DECREMENT_YEAR,
+  INCREMENT_MONTH,
+  DECREMENT_MONTH,
+  incrementYear,
+  decrementYear,
+  incrementMonth,
+  decrementMonth,
+} from '../../actions';
 import Button from './styles';
 
-interface IChangeButton {
+interface ChangeButtonProps {
   type: string;
   direction: string;
 }
 
-const ChangeButton: React.FC<IChangeButton> = ({
-  type,
-  direction,
-}): ReactElement => {
+const ChangeButton = ({ type, direction }: ChangeButtonProps): ReactElement => {
+  const btnName = `CALENDAR/${direction}_${type}`;
   const dispatch = useDispatch();
-  const className = `${direction}-${type}`;
+
+  const actionSelector = (name: string) => {
+    switch (name) {
+      case INCREMENT_YEAR:
+        dispatch(incrementYear());
+        break;
+      case DECREMENT_YEAR:
+        dispatch(decrementYear());
+        break;
+      case INCREMENT_MONTH:
+        dispatch(incrementMonth());
+        break;
+      case DECREMENT_MONTH:
+        dispatch(decrementMonth());
+        break;
+    }
+  };
 
   return (
-    <Button
-      className={className}
-      onClick={(): void => {
-        dispatch(changeCalendar(className));
-      }}
-    >
+    <Button onClick={(): void => actionSelector(btnName)}>
       {direction === 'DECREMENT' ? '<' : '>'}
     </Button>
   );

@@ -5,7 +5,7 @@ import DateTemplate from './components/DateTemplate/DateTemplate';
 import CalendarHeader from './components/CalendarHeader/CalendarHeader';
 import CalendarFooter from './components/CalendarFooter/CalendarFooter';
 
-const App: React.FC = (): React.ReactElement => (
+const App = (): React.ReactElement => (
   <>
     <CalendarHeader />
     <Controller />

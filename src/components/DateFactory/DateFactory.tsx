@@ -2,17 +2,17 @@ import React, { ReactElement } from 'react';
 import { CSSVariables } from '../../global-styles';
 import DateLi from './styles';
 
-interface IDateFactory {
+interface DateFactoryProps {
   dateList: number[];
   today: number;
   isGray: boolean;
 }
 
-const DateFactory: React.FC<IDateFactory> = ({
+const DateFactory = ({
   dateList,
   today,
   isGray,
-}): ReactElement => {
+}: DateFactoryProps): ReactElement => {
   return (
     <>
       {dateList.map(

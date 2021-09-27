@@ -1,21 +1,21 @@
-import { IDefaultDate } from '../reducer/dateReducer';
+import { DefaultDateConfig } from '../reducer/dateReducer';
 
-const getDay = (dateState: IDefaultDate): number => {
-  const { year, month, date }: IDefaultDate = dateState;
+const getDay = (dateState: DefaultDateConfig): number => {
+  const { year, month, date }: DefaultDateConfig = dateState;
   return new Date(year, month, date).getDay();
 };
 
-const getLastDateOfMonth = (dateState: IDefaultDate): number => {
+const getLastDateOfMonth = (dateState: DefaultDateConfig): number => {
   const { year, month } = dateState;
 
   return new Date(year, month + 1, 0).getDate(); // return last date of last month.
 };
 
-const getLastMonthList: Function = (dateState: IDefaultDate): number[] => {
+const getLastMonthList: Function = (dateState: DefaultDateConfig): number[] => {
   const month: number = dateState.month;
   const lastMonth: number = month === 0 ? 11 : month - 1;
 
-  const lastMonthContext: IDefaultDate = {
+  const lastMonthContext: DefaultDateConfig = {
     ...dateState,
     month: lastMonth,
   };
@@ -24,7 +24,7 @@ const getLastMonthList: Function = (dateState: IDefaultDate): number[] => {
   let dateList: number[];
   dateList = [];
 
-  const firstDayContext: IDefaultDate = {
+  const firstDayContext: DefaultDateConfig = {
     ...dateState,
     date: 1,
   };
@@ -36,7 +36,7 @@ const getLastMonthList: Function = (dateState: IDefaultDate): number[] => {
   return dateList;
 };
 
-const getNextMonthList = (dateState: IDefaultDate): number[] => {
+const getNextMonthList = (dateState: DefaultDateConfig): number[] => {
   const lastDate: number = getLastDateOfMonth(dateState);
   dateState = {
     ...dateState,
@@ -54,7 +54,7 @@ const getNextMonthList = (dateState: IDefaultDate): number[] => {
   return dateList;
 };
 
-const getCurrentMonthList = (dateState: IDefaultDate): number[] => {
+const getCurrentMonthList = (dateState: DefaultDateConfig): number[] => {
   let dateList: number[];
   dateList = [];
 
@@ -65,7 +65,7 @@ const getCurrentMonthList = (dateState: IDefaultDate): number[] => {
   return dateList;
 };
 
-const getDateObj: Function = (dateState: IDefaultDate) => {
+const getDateObj: Function = (dateState: DefaultDateConfig) => {
   const realDate: Date = new Date();
   let today: number = -1;
 

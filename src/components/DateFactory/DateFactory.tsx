@@ -20,7 +20,7 @@ const DateFactory = ({
           <DateLi
             key={index}
             today={eachDate === today ? CSSVariables.pointSkyblueColor : ''}
-            isgray={isGray ? 'gray' : ''}
+            isgray={isGray ? CSSVariables.notCurrentDateColor : ''}
           >
             {eachDate}
           </DateLi>

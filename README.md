@@ -60,9 +60,7 @@ Rebuild the calendar using React ⚛️
   - `/components` (`styles.ts` 생략)
     - `CalendarFooter`: 푸터
     - `CalendarHeader`: 헤더
-    - `ChangeButton.js`: 연도, 월 변경 버튼 컴포넌트
-    - `Container.js`: 버튼 및 연도, 월 텍스트의 부모 컴포넌트
-    - `Controller.js`: 연도, 월 컨테이너의 부모 컴포넌트
+    - `Controller.js`: 연도, 월 표시 및 변경 버튼
     - `DateFactory.js`: 날짜 리스트를 만드는 컴포넌트
     - `DateTemplate.js`: 날짜 리스트들의 부모 컴포넌트
     - `WeekBar.js`: 일요일부터 토요일까지를 나타내는 막대

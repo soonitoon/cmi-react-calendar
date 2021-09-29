@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { CSSVariables } from '../../global-styles';
 
 interface BtnContainerConfig {
   marginBottom: number;
@@ -17,4 +18,12 @@ interface DisplayConfig {
 
 export const Display = styled.h2<DisplayConfig>`
   font-size: ${(props) => props.fontSize}px;
+`;
+
+export const Button = styled.button`
+  border: none;
+  border-radius: 10px;
+  background-color: transparent;
+  font-size: 30px;
+  color: ${CSSVariables.pointSkyblueColor};
 `;

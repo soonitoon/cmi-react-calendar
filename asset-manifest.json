@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.js": "/cmi-react-calendar/static/js/main.7d20b680.chunk.js",
-    "main.js.map": "/cmi-react-calendar/static/js/main.7d20b680.chunk.js.map",
+    "main.js": "/cmi-react-calendar/static/js/main.e2bf7eff.chunk.js",
+    "main.js.map": "/cmi-react-calendar/static/js/main.e2bf7eff.chunk.js.map",
     "runtime-main.js": "/cmi-react-calendar/static/js/runtime-main.2ca1ddca.js",
     "runtime-main.js.map": "/cmi-react-calendar/static/js/runtime-main.2ca1ddca.js.map",
-    "static/js/2.a95f8fbc.chunk.js": "/cmi-react-calendar/static/js/2.a95f8fbc.chunk.js",
-    "static/js/2.a95f8fbc.chunk.js.map": "/cmi-react-calendar/static/js/2.a95f8fbc.chunk.js.map",
+    "static/js/2.fe04c398.chunk.js": "/cmi-react-calendar/static/js/2.fe04c398.chunk.js",
+    "static/js/2.fe04c398.chunk.js.map": "/cmi-react-calendar/static/js/2.fe04c398.chunk.js.map",
     "index.html": "/cmi-react-calendar/index.html",
-    "static/js/2.a95f8fbc.chunk.js.LICENSE.txt": "/cmi-react-calendar/static/js/2.a95f8fbc.chunk.js.LICENSE.txt"
+    "static/js/2.fe04c398.chunk.js.LICENSE.txt": "/cmi-react-calendar/static/js/2.fe04c398.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.2ca1ddca.js",
-    "static/js/2.a95f8fbc.chunk.js",
-    "static/js/main.7d20b680.chunk.js"
+    "static/js/2.fe04c398.chunk.js",
+    "static/js/main.e2bf7eff.chunk.js"
   ]
 }
